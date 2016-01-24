@@ -24,8 +24,8 @@ body {
 
 .container {
   width: auto;
-  max-width: 680px;
-  padding: 0 10px;
+  max-width: 640px;
+  padding: 0 160px;
 }
 .container .text-muted {
   margin: 10px 0;
