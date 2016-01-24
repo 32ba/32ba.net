@@ -35,12 +35,42 @@
 <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- スマートフォン向けメニュー -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-menu">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- タイトル -->
+      <a class="navbar-brand" href="index.html">MitsuTech</a>
+    </div>
+    <!-- グローバルナビ -->
+    <div class="collapse navbar-collapse" id="nav-menu">
+      <!-- ナビゲーションメニュー -->
+      <ul class="nav navbar-nav">
+        <!-- リンク -->
+        <li><a href="index.html">TOP</a></li>
+        <li class="active"><a href="profile.html">プロフィール</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
 <center>
   <div class="notfound">
     <span>404</span>
   </div>
   <hr width="80%"><br>
   <h1>404 Not Found.</h1>
+  <div class="error">
+      <span>あなたがアクセスしようとしたページは存在しない<br>または削除された可能性があります.</span><br>
+      <span>アドレスをご確認の上,アクセスし直して下さい.</span>
+  </div>
+
 </center>
 
 <div id="footer">
