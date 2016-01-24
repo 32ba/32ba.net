@@ -1,3 +1,7 @@
 @charset "UTF-8";
 
+#footer{text-align: center;padding: 40px 0;background-color: #7E7E7E;}
 .img-responsive-center{margin: 0 auto;}
+.copy{margin-top: 20px;}
+.copy span{color: #333;}
+.notfound span{font-size: 80pt;}
