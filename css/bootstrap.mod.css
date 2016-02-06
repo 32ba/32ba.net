@@ -9,3 +9,4 @@ body{margin-bottom: 60px;}
 .copy span{color: #808080;}
 .notfound span{font-size: 80pt;}
 .error span{margin: .67em 0;font-size: 18pt;}
+.twitter-timeline {min-width:320px!important;}
