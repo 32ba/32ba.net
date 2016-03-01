@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 html{position: relative;min-height: 100%;font-family: sans-serif;}
 body{margin-bottom: 60px;}
@@ -9,4 +8,8 @@ body{margin-bottom: 60px;}
 .copy span{color: #808080;}
 .notfound span{font-size: 80pt;}
 .error span{margin: .67em 0;font-size: 18pt;}
-.twitter-timeline {min-width: 290px!important;max-width: 290px!important}
+.twitter-timeline {min-width: 290px!important;max-width: 290px!important;}
+.circle{
+float: left;
+border-radius: 50%;
+}
