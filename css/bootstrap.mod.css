@@ -9,4 +9,4 @@ body{margin-bottom: 60px;}
 .notfound span{font-size: 80pt;}
 .error span{margin: .67em 0;font-size: 18pt;}
 .twitter-timeline {min-width: 290px!important;max-width: 290px!important;}
-.circle{float: left;border-radius: 50%;}
+.circle{float: left;border-radius: 50%;width: 60px;height: 60px;}
