@@ -36,6 +36,27 @@ plugins:
 
 #minimal-mistakes orig setting
 minimal_mistakes_skin: "air"
+
+#defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+      toc: true
+      author_profile: true
+      comments: true
+      share: true
+      related: true
+      read_time: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: single
+      author_profile: true
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
