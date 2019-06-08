@@ -3,8 +3,9 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: single
-excerpt: "Hello! This is **Mitsuba**'s homepage"
+excerpt: "Hello! This is **Mitsuba(32ba)**'s homepage"
 header:
   overlay_color: "#333"
 ---
-# Hello 
+# Hello! 
+そのうちちゃんとしたページが出来上がる予定です
