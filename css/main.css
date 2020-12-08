@@ -19,7 +19,6 @@ $primary-invert: $pink-invert;
 // 4. Import the rest of Bulma
 */
 /*! bulma.io v0.8.2 | MIT License | github.com/jgthms/bulma */
-@import "https://cdn.jsdelivr.net/gh/konpa/devicon@master/devicon.min.css";
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
