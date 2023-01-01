@@ -1,0 +1,30 @@
+figure.center {
+    text-align: center;
+}
+figure.center img {
+    margin: 0 auto;
+}
+figure.left {
+    text-align: left;
+}
+figure.left img {
+    margin-right: auto;
+}
+
+figure.right {
+    text-align: right;
+}
+figure.right img {
+    margin-left: auto;
+}
+
+figure.float_left {
+    float: left;
+}
+figure.float_right {
+    float: right;
+}
+
+.float_clear{
+    clear: both;
+}
