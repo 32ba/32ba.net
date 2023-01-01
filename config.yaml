@@ -1,0 +1,106 @@
+baseURL: "https://32ba.net/"
+languageCode: "en-us"
+defaultContentLanguage: "en"
+title: "32ba.net"
+
+module:
+  imports:
+  - path: github.com/adityatelange/hugo-PaperMod
+    
+languages:
+    en:
+        languageName: English
+        weight: 1
+        taxonomies:
+            tag: tags
+            category: categories
+        menu:
+            main:
+                - name: Home
+                  url: /
+                  weight: 1
+                - name: About Me
+                  url: /aboutme
+                  weight: 2
+                - name: Blog
+                  url: /posts
+                  weight: 3
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+# googleAnalytics: UA-123-45
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+params:
+    assets:
+        favicon: "images/favicon.ico"
+        favicon16x16: "images/favicon.ico"
+        favicon32x32: "images/favicon.ico"
+        apple_touch_icon: "images/favicon.ico"
+        safari_pinned_tab: "images/favicon.ico"
+
+    dateFormat: "2006/01/02 15:04:05"
+
+    defaultTheme: auto
+    disableThemeToggle: false
+    ShowShareButtons: true
+    ShowReadingTime: true
+    displayFullLangName: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowRssButtonInSectionTermList: true
+    ShowToc: true 
+    enableBlogPost: true
+    showFlags: true
+
+    profileMode:
+        enabled: true
+        title: 32ba
+        imageUrl: "images/icon.jpg"
+        imageTitle: My Icon
+        imageWidth: 240
+        imageHeight: 240
+        buttons:
+            - name: About Me
+              url: aboutme
+
+    socialIcons:
+        - name: Twitter
+          url: "https://twitter.com/32ba__"
+        - name: Github
+          url: "https://github.com/32ba"
+        - name: Keybase
+          url: "https://keybase.io/32ba"
+        - name: Rss
+          url: "index.xml"
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+        parser:
+            attribute:
+                block: true
+    highlight:
+        noClasses: false
+        # anchorLineNos: true
+        # codeFences: true
+        # guessSyntax: true
+        # lineNos: true
+        # style: monokai
+

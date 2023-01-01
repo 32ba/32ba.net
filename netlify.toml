@@ -1,2 +1,12 @@
 [build]
-  publish = "./"
+publish = "public"
+command = "hugo mod get && hugo --gc --minify"
+
+[build.environment]
+GO_VERSION = "1.19.4"
+
+[context.production.environment]
+HUGO_VERSION = "0.107.0"
+HUGO_ENV = "production"
+HUGO_ENABLEGITINFO = "true"
+TZ = "Asia/Tokyo"
