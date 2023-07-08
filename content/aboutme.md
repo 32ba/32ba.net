@@ -16,7 +16,9 @@ TypeScriptやGo言語が好きです．
 ## アカウントなど
 | サービス名 | URL or ID |
 |:-----------|:----------|
-| Twitter    | [@32ba](https://twitter.com/32ba__) |
+| Twitter    | [@32ba__](https://twitter.com/32ba__) |
+| Bluesky    | [32ba](https://bsky.app/profile/32ba.net) |
+| Misskey<br>(misskey.io)    | [32ba](https://misskey.io/@32ba) |
 | GitHub     | [32ba](https://github.com/32ba) |
 | Keybase    | [32ba](https://keybase.io/32ba) |
 | メール      | {{< email >}} |
