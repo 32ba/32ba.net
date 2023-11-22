@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卒論締め切りまであと何時間？</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 5px;
+            background-color: rgb(230, 230, 230);
+        }
+
+        .countdown-fixed-text {
+            font-weight: bold;
+            font-size: 4vw; 
+            margin: 0;
+            text-align: left;
+        }
+
+        .countdown-box {
+            margin: 30px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left; 
+            color: black;
+        }
+
+        .countdown-text {
+            font-family: 'Play', sans-serif;
+            font-size: 8vw;
+            margin: 0;
+            text-align: left;
+        }
+
+        .countdown-urgent {
+            color: rgb(240, 0, 0);
+            -webkit-text-stroke: 1px black;
+        }
+
+        .countdown-warning {
+            color: rgb(255, 255, 0);
+            -webkit-text-stroke: 1px black;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdownLabDeadline" class="countdown-box">
+        <p class="countdown-fixed-text">卒論研究室内締め切りまで</p>
+        <p class="countdown-fixed-text">(2023-12-07 00:00:00 JST)<p>
+        <p class="countdown-text"></p>
+    </div>
+
+    <div id="countdownThesisDeadline" class="countdown-box">
+        <p class="countdown-fixed-text">卒論締め切りまで</p>
+        <p class="countdown-fixed-text">(2023-12-25 16:00:00 JST)<p>
+        <p class="countdown-text"></p>
+    </div>
+    
+    <script>
+        // Set target dates and times in JST
+        const labDeadline = '2023-12-07T00:00:00+09:00';
+        const thesisDeadline = '2023-12-25T16:00:00+09:00';
+
+        function getTimeDifference(targetTime) {
+            const now = new Date();
+            const target = new Date(targetTime);
+
+            if (target <= now) {
+                // If the target time has already passed, set it to the current time
+                target.setTime(now.getTime());
+            }
+
+            const difference = target - now;
+            return difference;
+        }
+
+        function formatTimeDifference(timeDifference) {
+            const isNegative = timeDifference < 0;
+            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000).toString().padStart(2, '0');
+            const milliseconds = (timeDifference % 1000).toString().padStart(3, '0');
+
+            const formattedText = `${isNegative ? '-' : ''}${days}Day(s) ${hours}:${minutes}:${seconds}.${milliseconds}`;
+
+            if (days < 1) {
+                return `<span class="countdown-urgent">${formattedText}</span>`;
+            } else if (days <= 5) {
+                return `<span class="countdown-warning">${formattedText}</span>`;
+            } else {
+                return formattedText;
+            }
+        }
+
+        function updateCountdown() {
+            const timeDifferenceLabDeadline = getTimeDifference(labDeadline);
+            const timeDifferenceThesisDeadline = getTimeDifference(thesisDeadline);
+
+            document.getElementById('countdownLabDeadline').getElementsByClassName('countdown-text')[0].innerHTML = `${formatTimeDifference(timeDifferenceLabDeadline)}`;
+            document.getElementById('countdownThesisDeadline').getElementsByClassName('countdown-text')[0].innerHTML = `${formatTimeDifference(timeDifferenceThesisDeadline)}`;
+
+            requestAnimationFrame(updateCountdown);
+        }
+
+        // Initial update
+        updateCountdown();
+    </script>
+
+</body>
+</html>
