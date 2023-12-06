@@ -50,12 +50,6 @@
     </style>
 </head>
 <body>
-    <div id="countdownLabDeadline" class="countdown-box">
-        <p class="countdown-fixed-text">卒論研究室内締め切りまで</p>
-        <p class="countdown-fixed-text">(2023-12-07 00:00:00 JST)<p>
-        <p class="countdown-text"></p>
-    </div>
-
     <div id="countdownThesisDeadline" class="countdown-box">
         <p class="countdown-fixed-text">卒論締め切りまで</p>
         <p class="countdown-fixed-text">(2023-12-25 16:00:00 JST)<p>
@@ -64,7 +58,6 @@
     
     <script>
         // Set target dates and times in JST
-        const labDeadline = '2023-12-07T00:00:00+09:00';
         const thesisDeadline = '2023-12-25T16:00:00+09:00';
 
         function getTimeDifference(targetTime) {
@@ -100,10 +93,8 @@
         }
 
         function updateCountdown() {
-            const timeDifferenceLabDeadline = getTimeDifference(labDeadline);
             const timeDifferenceThesisDeadline = getTimeDifference(thesisDeadline);
 
-            document.getElementById('countdownLabDeadline').getElementsByClassName('countdown-text')[0].innerHTML = `${formatTimeDifference(timeDifferenceLabDeadline)}`;
             document.getElementById('countdownThesisDeadline').getElementsByClassName('countdown-text')[0].innerHTML = `${formatTimeDifference(timeDifferenceThesisDeadline)}`;
 
             requestAnimationFrame(updateCountdown);
