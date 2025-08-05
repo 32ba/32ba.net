@@ -48,7 +48,7 @@ FireLensは実質的にFluent BitなのでFastifyなどの構造化されたロ�
 
 数値で表現されるログレベルをパースするとFluent Bitの内部的には数値としてデータを持ちますが、regexは文字列に対するマッチングを行うため、数値のフィールドに対しては正規表現を使うことができませんでした。
 
-https://github.com/fluent/fluent-bit/issues/6284
+{{< webcard "https://github.com/fluent/fluent-bit/issues/6284" >}}
 
 似たような問題はGitHubのIssueに報告されていますが"Not planned"となっていてFluent Bit側で何かしらの解決策が提示されることはなさそうです。
 
